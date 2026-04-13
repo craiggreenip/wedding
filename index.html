@@ -92,7 +92,7 @@
 
         .signup-container h2 {
             font-size: 32px;
-            color: #1a1a1a;
+            color: #3a3a3a;
             margin-bottom: 12px;
             font-weight: 400;
         }
@@ -167,17 +167,113 @@
             margin-top: 20px;
         }
 
-        /* Details Section */
-        .details-section {
+        /* Invitation Section */
+        .invitation-section {
             max-width: 900px;
             margin: 0 auto;
             padding: 80px 20px;
             animation: fadeIn 1s ease-out 0.6s both;
         }
 
+        .invitation-card {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 80px 60px;
+            background: #fff;
+            border: 2px solid rgba(198, 150, 170, 0.3);
+            border-radius: 4px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(198, 150, 170, 0.08);
+        }
+
+        .invitation-card::before,
+        .invitation-card::after {
+            content: '✦';
+            position: absolute;
+            font-size: 24px;
+            color: #c4956b;
+        }
+
+        .invitation-card::before {
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .invitation-card::after {
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .invitation-header {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(198, 150, 170, 0.2);
+        }
+
+        .invitation-header p {
+            font-size: 14px;
+            color: #999;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .invitation-header h2 {
+            font-size: 48px;
+            font-weight: 400;
+            color: #3a3a3a;
+            margin-bottom: 8px;
+            font-style: italic;
+            line-height: 1.2;
+        }
+
+        .invitation-body {
+            margin-bottom: 40px;
+        }
+
+        .invitation-detail {
+            margin-bottom: 30px;
+        }
+
+        .invitation-detail-label {
+            font-size: 12px;
+            color: #999;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .invitation-detail-value {
+            font-size: 18px;
+            color: #3a3a3a;
+            line-height: 1.8;
+        }
+
+        .invitation-footer {
+            padding-top: 30px;
+            border-top: 1px solid rgba(198, 150, 170, 0.2);
+        }
+
+        .invitation-footer p {
+            font-size: 14px;
+            color: #999;
+            font-style: italic;
+        }
+
+        /* Updates Section */
+        .updates-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 20px;
+            animation: fadeIn 1s ease-out 0.9s both;
+        }
+
         .section-title {
             font-size: 36px;
-            color: #1a1a1a;
+            color: #3a3a3a;
             margin-bottom: 8px;
             font-weight: 400;
             text-align: center;
@@ -191,77 +287,61 @@
             letter-spacing: 0.5px;
         }
 
-        .cards-grid {
+        .updates-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
-            margin-bottom: 80px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
         }
 
-        .card {
-            padding: 40px;
+        .update-post {
             background: #fff;
             border: 1px solid rgba(198, 150, 170, 0.2);
             border-radius: 4px;
-            text-align: center;
+            overflow: hidden;
             transition: all 0.3s ease;
         }
 
-        .card:hover {
+        .update-post:hover {
             border-color: rgba(198, 150, 170, 0.4);
             box-shadow: 0 4px 16px rgba(198, 150, 170, 0.12);
         }
 
-        .card-label {
-            font-size: 13px;
-            color: #999;
+        .update-post-header {
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(230, 217, 243, 0.3) 0%, rgba(212, 228, 216, 0.2) 100%);
+            border-bottom: 1px solid rgba(198, 150, 170, 0.1);
+        }
+
+        .update-date {
+            font-size: 12px;
+            color: #c4956b;
             letter-spacing: 1px;
-            margin-bottom: 12px;
             text-transform: uppercase;
-        }
-
-        .card h3 {
-            font-size: 28px;
-            color: #1a1a1a;
             margin-bottom: 8px;
-            font-weight: 400;
         }
 
-        .card p {
+        .update-title {
+            font-size: 20px;
+            color: #3a3a3a;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        .update-post-body {
+            padding: 30px;
+        }
+
+        .update-post-body p {
             color: #666;
             font-size: 15px;
+            line-height: 1.7;
+            margin: 0;
         }
 
-        /* Gallery Section */
-        .gallery-section {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 80px 20px;
-            animation: fadeIn 1s ease-out 0.9s both;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .gallery-item {
-            aspect-ratio: 1;
-            background: linear-gradient(135deg, rgba(230, 217, 243, 0.3) 0%, rgba(212, 228, 216, 0.2) 100%);
-            border: 1px solid rgba(198, 150, 170, 0.2);
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #d4c5d9;
-            font-size: 14px;
-            transition: all 0.3s ease;
-        }
-
-        .gallery-item:hover {
-            border-color: rgba(198, 150, 170, 0.4);
-            background: linear-gradient(135deg, rgba(230, 217, 243, 0.5) 0%, rgba(212, 228, 216, 0.3) 100%);
+        .placeholder-post {
+            text-align: center;
+            padding: 60px 30px;
+            color: #ccc;
         }
 
         /* Footer */
@@ -285,11 +365,6 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .hero {
-                min-height: 40vh;
-                padding: 40px 20px;
-            }
-
             .hero h1 {
                 font-size: 48px;
                 letter-spacing: 1px;
@@ -319,25 +394,28 @@
                 width: 100%;
             }
 
-            .cards-grid {
-                gap: 20px;
-                margin-bottom: 60px;
+            .invitation-card {
+                padding: 60px 30px;
             }
 
-            .card {
-                padding: 30px 20px;
+            .invitation-header h2 {
+                font-size: 32px;
+            }
+
+            .invitation-section {
+                padding: 60px 20px;
+            }
+
+            .updates-section {
+                padding: 60px 20px;
+            }
+
+            .updates-grid {
+                gap: 20px;
             }
 
             .section-title {
                 font-size: 28px;
-            }
-
-            .details-section {
-                padding: 60px 20px;
-            }
-
-            .gallery-section {
-                padding: 60px 20px;
             }
         }
     </style>
@@ -375,44 +453,78 @@
         </div>
     </section>
 
-    <!-- Details Section -->
-    <section class="details-section">
-        <h2 class="section-title">The Details</h2>
-        <p class="section-subtitle">Everything you need to know</p>
-
-        <div class="cards-grid">
-            <!-- Date Card -->
-            <div class="card">
-                <div class="card-label">The Date</div>
-                <h3>June 15, 2025</h3>
-                <p>Saturday at 3:00 PM</p>
+    <!-- Invitation Section -->
+    <section class="invitation-section">
+        <div class="invitation-card">
+            <div class="invitation-header">
+                <p>Together with</p>
+                <h2>We invite you to our wedding</h2>
             </div>
 
-            <!-- Location Card -->
-            <div class="card">
-                <div class="card-label">The Venue</div>
-                <h3>Grand Estate</h3>
-                <p>123 Meadow Lane<br>Your City, State</p>
+            <div class="invitation-body">
+                <div class="invitation-detail">
+                    <div class="invitation-detail-label">Date</div>
+                    <div class="invitation-detail-value">
+                        Saturday, the fifteenth of June<br>
+                        Two thousand twenty-five
+                    </div>
+                </div>
+
+                <div class="invitation-detail">
+                    <div class="invitation-detail-label">Time</div>
+                    <div class="invitation-detail-value">
+                        Three o'clock in the afternoon
+                    </div>
+                </div>
+
+                <div class="invitation-detail">
+                    <div class="invitation-detail-label">Location</div>
+                    <div class="invitation-detail-value">
+                        Grand Estate<br>
+                        123 Meadow Lane<br>
+                        Your City, State
+                    </div>
+                </div>
             </div>
 
-            <!-- RSVP Card -->
-            <div class="card">
-                <div class="card-label">Please Confirm</div>
-                <h3>RSVP</h3>
-                <p>By May 1st<br>hello@wedding.com</p>
+            <div class="invitation-footer">
+                <p>RSVP by May 1st<br>hello@wedding.com</p>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section class="gallery-section">
-        <h2 class="section-title">A Sneak Peek</h2>
-        <p class="section-subtitle">Coming soon</p>
-        
-        <div class="gallery-grid">
-            <div class="gallery-item">Photo 1</div>
-            <div class="gallery-item">Photo 2</div>
-            <div class="gallery-item">Photo 3</div>
+    <!-- Updates Section -->
+    <section class="updates-section">
+        <h2 class="section-title">Latest Updates</h2>
+        <p class="section-subtitle">News and details about our wedding</p>
+
+        <div class="updates-grid">
+            <!-- Update Post 1 -->
+            <div class="update-post">
+                <div class="update-post-header">
+                    <div class="update-date">March 15, 2025</div>
+                    <h3 class="update-title">Venue Confirmed!</h3>
+                </div>
+                <div class="update-post-body">
+                    <p>We're so excited to announce that we've booked the most beautiful venue for our celebration. More details about accommodations and parking coming soon!</p>
+                </div>
+            </div>
+
+            <!-- Update Post 2 -->
+            <div class="update-post">
+                <div class="update-post-header">
+                    <div class="update-date">March 10, 2025</div>
+                    <h3 class="update-title">Save the Date</h3>
+                </div>
+                <div class="update-post-body">
+                    <p>Official invitations are in the mail! We can't wait to celebrate with you. More details including the full itinerary and accommodation options coming very soon.</p>
+                </div>
+            </div>
+
+            <!-- Update Post 3 - Placeholder -->
+            <div class="update-post placeholder-post">
+                <p>More updates coming soon...</p>
+            </div>
         </div>
     </section>
 
