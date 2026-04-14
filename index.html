@@ -793,13 +793,12 @@
         <div class="heart">💕</div>
     </footer>
  
-    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/15.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/15.10.1/firebase-database.js"></script>
     
     <script>
         // Firebase Configuration
-        const Config = {
+        const firebaseConfig = {
             apiKey: "AIzaSyAZjy9y7-8xlOaIQK1yU3ETFpFgZozprbM",
             authDomain: "our-wedding-posts.firebaseapp.com",
             databaseURL: "https://our-wedding-posts-default-rtdb.europe-west1.firebasedatabase.app",
@@ -810,7 +809,7 @@
         };
  
         // Initialize Firebase
-        firebase.initializeApp(Config);
+        firebase.initializeApp(firebaseConfig);
         const database = firebase.database();
  
         // Handle Form Submission
